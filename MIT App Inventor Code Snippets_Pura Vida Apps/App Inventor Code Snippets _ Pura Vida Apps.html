@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://puravidaapps.com/snippets.php -->
+<html class=" js no-touch svg inlinesvg svgclippaths no-ie8compat js no-touch svg inlinesvg svgclippaths no-ie8compat" lang="en" style=""><script src="./App Inventor Code Snippets _ Pura Vida Apps_files/f(4).txt"></script><script src="./App Inventor Code Snippets _ Pura Vida Apps_files/osd.js"></script><script src="./App Inventor Code Snippets _ Pura Vida Apps_files/f(5).txt" id="google_shimpl"></script><script src="./App Inventor Code Snippets _ Pura Vida Apps_files/f(6).txt"></script><script id="allow-copy_script">(function agent() {
+    let isUnlockingCached = false
+    const isUnlocking = () => isUnlockingCached
+    document.addEventListener('allow_copy', event => {
+      const { unlock } = event.detail
+      isUnlockingCached = unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = e => {
+      if (isUnlocking()) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach(evt => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>App Inventor Code Snippets | Pura Vida Apps</title>
+    <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width">
+  
+  <meta name="keywords" lang="en" content="Android, Apps">
+  <meta name="description" lang="en" content="App Inventor apps, tutorials, extensions, news, forums and snippets.">
+  <meta name="robots" content="all">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="puravidaapps.com">
+
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="./App Inventor Code Snippets _ Pura Vida Apps_files/foundation.min.css">
+  <link rel="stylesheet" href="./App Inventor Code Snippets _ Pura Vida Apps_files/style21.css">
+  <link rel="shortcut icon" href="http://puravidaapps.com/favicon.ico">
+
+  <script src="./App Inventor Code Snippets _ Pura Vida Apps_files/modernizr.foundation.js"></script>
+  <!-- REMEMBER special case: importCSV.php -->  <script src="./App Inventor Code Snippets _ Pura Vida Apps_files/jquery-1.8.2.min.js"></script>
+
+  <script>
+    // redirecting users looking for an AI1 snippet to the AI1 snippets page
+    var urlArray = location.href.split("#");
+    //alert(location.href);
+
+    if (urlArray[1]) {
+      //alert(urlArray[1].substr(0,1));
+      if(urlArray[1].substr(0,1) != "2")
+      {
+        // AI2 anchors start with 2
+        location.href='https://puravidaapps.com/snippets1.php#' + urlArray[1];
+      }
+    }
+  </script>
+
+  <style>
+    .orbit-wrapper { height: 250px !important; }
+  </style>
+<link rel="preload" href="./App Inventor Code Snippets _ Pura Vida Apps_files/f(7).txt" as="script"><script type="text/javascript" src="./App Inventor Code Snippets _ Pura Vida Apps_files/f(7).txt"></script><link rel="preload" href="./App Inventor Code Snippets _ Pura Vida Apps_files/f(8).txt" as="script"><script type="text/javascript" src="./App Inventor Code Snippets _ Pura Vida Apps_files/f(8).txt"></script></head>
+
+<body style="zoom: 1; padding-top: 45px;">
+  <div class="row">
+    <div class="twelve columns">
+      <h1 id="title"><a href="http://puravidaapps.com/index.php" target="_top"><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/logo.png" width="125" height="125" alt="" title=""></a>
+        App Inventor Code Snippets
+      </h1>
+    </div> <!-- end: 12 columns -->
+    <div class="fixed contain-to-grid">
+<!-- <div class="sticky contain-to-grid"> -->
+  <nav class="top-bar">
+    <ul>
+        <li class="name"><h1><a href="http://puravidaapps.com/index.php">Pura Vida Apps</a></h1></li>
+        <li class="toggle-topbar"><a href="http://puravidaapps.com/snippets.php#"></a></li>
+        <li><a href="http://puravidaapps.com/snippets.php">Snippets</a></li>
+        <li><a href="http://puravidaapps.com/tutorials.php">Tutorials</a></li>
+        <li><a href="http://puravidaapps.com/extensions.php">Extensions</a></li>
+        <li><a href="http://puravidaapps.com/links.php">Links</a></li>
+        <li><a href="http://puravidaapps.com/search.php">Search</a></li>
+        <li><a href="http://puravidaapps.com/privacy-policy.php">Privacy Policy</a></li>
+        <li><a href="http://puravidaapps.com/contact.php">Contact</a></li>
+    </ul>
+  </nav>
+</div>  </div> <!-- end: row -->
+
+  <hr class="hrtop">
+
+  <div class="row" style="height:120px;text-align:center">
+  <div class="twelve columns">
+
+    <script type="text/javascript"><!--
+      google_ad_client = "ca-pub-4570652611310282";
+      /* puravida1 */
+      google_ad_slot = "0737024558";
+      google_ad_width = 728;
+      google_ad_height = 90;
+      //-->
+    </script>
+    <script src="./App Inventor Code Snippets _ Pura Vida Apps_files/f(9).txt"></script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;" data-ad-slot="0737024558" data-overlap-observer-io="false"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:728px;height:90px;" src="./App Inventor Code Snippets _ Pura Vida Apps_files/saved_resource(1).html"></iframe></ins></ins>
+
+  </div>
+</div>
+
+  <div class="row">
+    <div class="twelve columns">
+      <h4>This page lists useful <b>code snippets</b> for <a class="ext" href="http://appinventor.mit.edu/" target="_blank"><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/ai2logo.png" width="44" height="39" alt="" title=""> App Inventor</a>.</h4>
+
+      <hr class="thin">
+
+      <div class="hide-for-small">
+  <div id="slider" style="">
+    <h4>These and more Examples you can find at the <a class="button" href="http://puravidaapps.com/tutorials.php" target="_top">Tutorials</a> page</h4>
+
+    <div class="orbit-wrapper" style="width: inherit; height: inherit;"><div id="featuredContent" class="orbit" style="width: inherit; height: inherit;"><img data-src="holder.js/16x6" class="fluid-placeholder" alt="16x6" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAA4UlEQVQoU2WQTatGQBiG7ymUDRZWNsrCBqVkw++nLJCUbH0lFsLGxsdpps7pdd5ZzXTdXfM8N1mW5ZnnGdM0wXEcFEWB8zyx7zt838dxHBiGAfd9Q9d19H3/4uS/IMsycBwHQggEQYBpmoiiiL2DIECe5y/+JaABTdNYqOs6uK6LsiyZwLZtJvjkX4KqqqAoCniexziOsCwLcRyDnjAMUdf1i5O2bR8a3LYNhmH87UwnkGUZoihiXVdc1wVVVVkXtJNfTpIkeZqmYT9IkgTP85CmKSuK3un4VEwFbduylT75DxSynoyG7CUEAAAAAElFTkSuQmCC" style="background-color: rgb(238, 238, 238);">
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <div class="row orbit-slide" style="opacity: 0; z-index: 1; display: block; left: -100px;">
+        <div class="one columns">
+        </div>
+
+        <div class="three columns">
+          <a href="http://puravidaapps.com/table.php" target="_top"><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/logo(1).png" alt="" title=""></a>
+        </div>
+
+        <div class="seven columns">
+          <h4>
+            <a class="info" href="http://puravidaapps.com/table.php" target="_top">App Inventor and dynamic table layout with any number of rows and columns</a>
+          </h4>
+          <p>How to display a table in App Inventor <b>without knowing how many rows and columns will be supplied</b>.
+          </p>
+        </div>
+
+        <div class="one columns">
+        </div>
+      </div> <!-- end: row -->
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <div class="row orbit-slide" style="opacity: 1; display: block; left: 0px; z-index: 3;">
+        <div class="one columns">
+        </div>
+
+        <div class="three columns">
+          <a href="http://puravidaapps.com/listview.php" target="_top"><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/logo(2).png" alt="" title=""></a>
+        </div>
+
+        <div class="seven columns">
+          <h4>
+            <a class="info" href="http://puravidaapps.com/listview.php" target="_top">Another Listpicker alternative with App Inventor and
+              <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/jquery-logo.png" alt="jQuery Mobile" style="border:0;width:29px;height:25px;"> jQuery Mobile
+              including a Search Filter!</a>
+          </h4>
+          <p>The example displays an App Inventor list in a jQuery Mobile Listview, which offers loads of possibilities!</p>
+        </div>
+
+        <div class="one columns">
+        </div>
+      </div> <!-- end: row -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <div class="row orbit-slide" style="opacity: 0; display: block; left: -100px; z-index: 1;">
+        <div class="one columns">
+        </div>
+
+        <div class="three columns">
+          <a href="http://puravidaapps.com/sortable.php" target="_top"><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/logo(3).png" alt="" title=""></a>
+        </div>
+
+        <div class="seven columns">
+          <h4>
+            <a class="info" href="http://puravidaapps.com/sortable.php" target="_top">A Sortable List using Drag-and-Drop with App Inventor and
+              <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/jQueryUI-logo.png" alt="jQuery UI" style="border:0;width:25px;height:25px;">jQuery UI</a>
+          </h4>
+          <p>Use <b>drag and drop</b> to order list items manually.</p>
+        </div>
+
+        <div class="one columns">
+        </div>
+      </div> <!-- end: row -->
+
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <div class="row orbit-slide" style="opacity: 0; display: block; left: -100px; z-index: 1;">
+        <div class="one columns">
+        </div>
+
+        <div class="three columns">
+          <a href="http://puravidaapps.com/sendmail.php" target="_top"><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/logo(4).png" alt="" title=""></a>
+        </div>
+
+        <div class="seven columns">
+          <h4>
+            <a class="info" href="http://puravidaapps.com/sendmail.php" target="_top">Different eMail solutions for App Inventor</a>
+          </h4>
+          <p>The different eMail solutions for App Inventor are listed here. Also it is explained, how to send an email including attachment.<br>
+            It's also possible to send HTML format in the eMail body!
+          </p>
+        </div>
+
+        <div class="one columns">
+        </div>
+      </div> <!-- end: row -->
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    </div><div class="timer"><span class="mask"><span class="rotator"></span></span><span class="pause active"></span></div><div class="orbit-caption"></div><div class="slider-nav hide-for-small"><span class="right">Right</span><span class="left">Left</span></div></div>
+  </div>
+</div>
+      <hr class="thin">
+
+<!--
+      <h2>What's <img src="./images/new.png" alt="New" title="New" style="width:32px;height:32px;"> New?</h2>
+      <ul class="square">
+        <li><a href="#2clipboard" target="_top">How to copy text to the Clipboard</a>: update was necessary because of the Google Docs update</li>
+      </ul>
+
+      <hr class="thin" />
+-->
+
+      <h2><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/ai2logo.png" width="44" height="39" alt="" title=""> App Inventor Code Snippets Overview</h2>
+
+      <h3><a href="http://puravidaapps.com/snippets.php#2canvas" target="_top">Canvas</a></h3>
+        <ul class="square">
+          <li><a href="http://puravidaapps.com/snippets.php#2canvassave" target="_top">How to save a canvas</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2scratchcard" target="_top">How to create a Scratchcard with App Inventor</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2flung" target="_top">How to Swipe left/right and top/bottom to trigger something</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2draw" target="_top">How to change background image without changing drawn lines</a></li>
+        </ul>
+
+      <h3><a href="http://puravidaapps.com/snippets.php#2webviewer" target="_top">Web Viewer and App Inventor</a></h3>
+        <ul class="square">
+          <li><a href="http://puravidaapps.com/snippets.php#2htmlread" target="_top">How to read a HTML page stored as asset inside of App Inventor</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2ani" target="_top">App Inventor and animated gifs</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2pdf" target="_top">How to  view a pdf document</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2authurl" target="_top">How to pass user and password for basic HTTP Authentication in URL</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2webviewstring" target="_top">How does the property Webviewer.WebViewString work?</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2webviewstring2" target="_top">How to display some HTML text in a webviewer</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2sort" target="_top">How to sort a list using the webviewer(!)</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2max" target="_top">How to get the max value within a list of numbers</a></li>
+        </ul>
+
+      <h3><a href="http://puravidaapps.com/snippets.php#2activity" target="_top">Activity Starter</a></h3>
+        <ul class="square">
+          <li><a href="http://puravidaapps.com/snippets.php#2play" target="_top">How to launch Google Play from within your app</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2contact" target="_top">How to add a contact to the contact list</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2email" target="_top">How to send an eMail</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2waze" target="_top">How to launch Waze to look for a specified location</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2pdf" target="_top">How to  view a pdf document</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2imagepicker" target="_top">How to pick an image using the activity starter</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2youtube" target="_top">How to use Activity Starter to view a Youtube video in full screen</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2skype" target="_top">How to start a Skype call</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2enableBT" target="_top">How to enable Bluetooth (User still needs to confirm)</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2osmand" target="_top">How to start OsmAnd</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2clipboard" target="_top">How to copy text to the Clipboard</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2whatsapp" target="_top">How to start Whatsapp/send a message with Whatsapp</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2terminal" target="_top">How to execute statements in the Jackpal Terminal Emulator</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2uninstall" target="_top">How to uninstall another app programmatically</a></li>
+        </ul>
+
+      <h3><a href="http://puravidaapps.com/snippets.php#2other" target="_top">Other Stuff</a></h3>
+        <ul class="square">
+         <li><a href="http://puravidaapps.com/snippets.php#2compass" target="_top">How to build a simple compass app with App Inventor</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2bearing" target="_top">An enhancement to the compass app to provide additionally the direction to a waypoint</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2accelerometer" target="_top">How to trigger something if device is facing down</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2nestedlistpicker" target="_top">How to create a nested listpicker</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2getdate" target="_top">How to get a date in format YYYY-MM-DD</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2leadingZeros" target="_top">How to get leading zeros in App Inventor</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2dayofyear" target="_top">How to get the day of year</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2parse" target="_top">How to parse a result</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2soundrecorder" target="_top">How to use the Sound Recorder</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2notifier" target="_top">New formatting possibilities with the Notifier</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2label" target="_top">New formatting possibilities with the Label</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2randomsound" target="_top">How to play a random sound when the device is shaken</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2lookupinpairs" target="_top">How does the <b>lookup in pairs</b> block work?</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2removerandom" target="_top">How to pick a random item from a list without picking duplicates?</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2share" target="_top">How to take a picture or pick an image and share it</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2separator" target="_top">A workaround for the decimal separator problem</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2webget" target="_top">How to get european or chinese characters from Web ResponseContent</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2yandex" target="_top">How to use the YandexTranslate component</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2readfile" target="_top">How to read a file stored as asset in App Inventor</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2screenon" target="_top">How to keep the screen on</a></li>
+          <li><a href="http://puravidaapps.com/snippets.php#2dir" target="_top">How to create a directory</a></li>
+        </ul>
+
+      <div class="row">
+  <div class="twelve columns">
+    <div class="panel callout radius">
+      <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/Help.png" width="70" height="70" alt="" title="" style="float:left;padding-top:15px;padding-right:20px">
+      <h4 style="color:white">
+        For questions about <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/ai2logo.png" width="22" height="20" alt="" title=""> App Inventor,<br>please ask in the
+        <b><a class="ext" href="https://community.appinventor.mit.edu/" target="_blank">App Inventor community</a></b>.Thank you.
+      </h4>
+    </div>
+  </div>
+</div>
+
+<!--
+<script src="js/spamspan.js"></script>
+
+<div class="row">
+  <div class="twelve columns">
+    <div class="panel callout radius">
+      <img src="./images/Help.png" width="120" height="120" alt="" title="" style="float:left;padding-top:15px;padding-right:20px">
+      <h4 style="color:white">Do you need help with your App Inventor project?</h4>
+      <p><b>I can help you: for one hour I charge 25 USD.</b><br>
+        Please contact me at <b>
+        <span class="spamXspan">
+          <span class="b">info</span>
+          [at]
+          <span class="c">puravidaapps [dot] com</span>
+        </span></b> for details!<br>
+        For questions about <img src="./images/ai2logo.png" width="22" height="20" alt="" title=""> App Inventor, please use the
+        <b><a class="ext" href="https://groups.google.com/forum/#!forum/mitappinventortest" target="_blank">App Inventor forum</a></b>. Thank you.
+      </p>
+    </div>
+  </div>
+</div>
+-->
+      <a name="2canvas"></a><br><br>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <h2>Canvas</h2>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+      <a name="2canvassave"></a><br><br>
+      <h3>How to save a canvas</h3>
+      <p>This is a small add on to the <a class="ext" href="http://www.appinventor.org/paintpot2-steps" target="_blank">Paint Pot tutorial</a>.
+        Add additionally a Button and a TinyDB component. Then in the block editor add these two blocks.<br>
+        The function Canvas.Save and Canvas.SaveAs return the directory and filename. Therefore you have to
+        define something (e.g. a variable or a label) which is able to receive this information. In the example this information is stored in a TinyDB,
+        so the next time the app starts, the drawn picture is still there.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2canvassave.png" width="610" height="268" alt="" title=""><br>
+        In this example the image will be stored in the root directory of your SD card.<br>Feel free to add a directory, for example <b>/MyDirectory/MyCanvas.png</b><br>
+
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2scratchcard"></a><br><br>
+      <h3>How to create a Scratchcard with App Inventor</h3>
+      <p><a class="ext" href="https://groups.google.com/d/msg/programming-with-app-inventor/5IJFXiY1iWk/q7G9TXjcIE0J" target="_blank">It has been asked in the forum</a> how to create a scratchcard with App Inventor. This is my solution.
+      </p>
+
+      <div class="row">
+        <div class="eight columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2scratchcard.png" alt="" title="">
+        </div> <!-- end: 8 columns -->
+        <div class="four columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/scratchcard.png" alt="" title="">
+        </div> <!-- end: 4 columns -->
+      </div> <!-- end: row -->
+
+      <p>
+        <br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/scratchcard.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2flung"></a><br><br>
+      <h3>How to Swipe left/right and top/bottom to trigger something</h3>
+      <p>It was asked in the <a class="ext" href="https://groups.google.com/d/topic/programming-with-app-inventor/7wQ1It4kw1M/discussion" target="_blank">forum</a>: <i>I'm trying to swipe to change an image. How can I do that?</i>. This is a nice example for the flung event. Let me add additionally
+        <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/ZgWcquHeMPw/fGexI2FSJj4J" target="_blank">another requirement</a>:
+        <b>swipe to the left or right</b> to change an image and <b>swipe to the top or bottom</b> to change the background color.
+        We can use the <b>heading</b> property to find out, in which direction there was the swipe, the heading ranges between -180 to +180.
+      </p>
+
+      <div class="row">
+        <div class="nine columns">
+          <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2flung1.png" alt="" title=""><br>
+          <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2flung2.png" alt="" title="">
+        </div> <!-- end: 9 columns -->
+        <div class="three columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/alle.png" alt="" title="">
+        </div> <!-- end: 3 columns -->
+      </div> <!-- end: row -->
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/flung.aia" target="_blank">Download aia file for App Inventor</a><br><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2draw"></a><br><br>
+      <h3>How to change background image without changing drawn lines</h3>
+      <p>It was asked in the <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/F8AQt_IC4Yo/j1G1M1QdPZgJ" target="_blank">forum</a>: <i>I'm creating an app that will allow me to take a picture and then draw on it.
+        The next step would be to then be able to view the drawn part without the background image. How would I do this?</i><br>
+        The only possibility I can see is to set the taken image as screen background, then draw on the canvas.
+        I set the Canvas background color to none in the Designer window to be able to see the background image.
+        The Screen background color will be set to none after taking the first image in the Camera.AfterPicture event.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2draw.png" width="916" height="260" alt="" title=""><br>
+      </p>
+
+      <div class="row">
+        <div class="four columns">
+          <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/draw1.jpg" alt="" title="">
+        </div> <!-- end: 4 columns -->
+        <div class="four columns">
+          <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/draw2.jpg" alt="" title="">
+        </div> <!-- end: 4 columns -->
+        <div class="four columns">
+          <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/draw3.jpg" alt="" title="">
+        </div> <!-- end: 4 columns -->
+      </div> <!-- end: row -->
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/draw.aia" target="_blank">Download aia file for App Inventor</a><br><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2webviewer"></a><br><br>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <h2>Webviewer and App Inventor</h2>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <p>From the Palette, expand 'User Interface' and add a 'WebViewer' component to the screen.</p>
+
+      <a name="2htmlread"></a><br><br>
+      <h3>How to read a HTML page stored as media file inside of App Inventor</h3>
+      <p>The example uses 2 html files and an image stored as media files inside of App Inventor.
+        In case you like to take a look at the source of these files, upload the App Inventor aia file
+        to App Inventor and download the html files from the assets list.<br><br>
+
+        There is one special thing to consider for HTML documents uploaded as assets into App Inventor:
+        During development, you have to use the <b>development path</b> to the embedded HTML document.<br>
+      </p>
+      <pre>file:///mnt/sdcard/AppInventor/assets/&lt;NAME OF YOUR HTML FILE&gt;.html</pre>
+
+      <p>
+        <br>Before building the app, use the <b>production path</b>.<br>
+      </p>
+      <pre>file:///android_asset/&lt;NAME OF YOUR HTML FILE&gt;.html</pre>
+      <br><br>
+      <p>Note: External anchors are working only for Android 2.x devices but not for Android 3.x and 4.x devices.
+        <b>Thank you Ehsan</b> for finding it out.<br>
+
+        Example: An external anchor is to go to the following url with a webviewer <b>file://android_assets/page2.html<span style="color:red">#myAnchor</span></b>.
+        This works only for Android 2.x.
+        You can go to this page <b>file://android_assets/page2.html</b> and inside the html document jump to the anchor, this works for all Android versions.
+      </p>
+
+      <p>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2html.png" width="577" height="107" alt="" title="">
+        <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/html.png" width="315" height="301" alt="" title=""><br><br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/HTML.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2ani"></a><br><br>
+      <h3>App Inventor and animated gifs</h3>
+      <p>You can access an animated gif file directly with the webviewer component.<br><br>
+        There is one special thing to consider for HTML documents uploaded as assets into App Inventor:
+        During development, you have to use the <b>development path</b> to the embedded HTML document.<br>
+      </p>
+      <pre>file:///mnt/sdcard/AppInventor/assets/ani.gif</pre>
+
+      <p>
+        <br>Before building the app, use the <b>production path</b>.<br>
+      </p>
+      <pre>file:///android_asset/ani.gif</pre>
+
+      <div class="row">
+        <div class="seven columns">
+          <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2ani.png" width="560" height="102" alt="" title="">
+        </div> <!-- end: 7 columns -->
+        <div class="five columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/aniscreenshot.gif" alt="" title="">
+        </div> <!-- end: 5 columns -->
+      </div> <!-- end: row -->
+
+      <p>
+        <br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/ani.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2webviewstring"></a><br><br>
+      <h3>How does the property Webviewer.WebViewString work?</h3>
+      <p> <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/RCinmiNFgGc/2oTdj7dWTXoJ" target="_blank">As explained by Hal here</a>: <i>You can use WebViewString to communicate values back and forth between your App and the WebViewer.
+        In your App, you get and set the WebViewer.WebViewString properties. In you webviewer, you open to a page that has Javascript that references
+        the window.AppInventor object, using its getWebViewString() and setWebViewString(text) methods.</i>
+        <b>Thank you Hal and Jeff for this great enhancement!</b><br><br>
+
+        For the example, I uploaded a html page as asset into App Inventor. Alternatively of course you can use a directory on the SD card, e.g. file:///sdcard/Temp/stuff.html<br><br>
+        There is one special thing to consider for HTML documents uploaded as assets into App Inventor:
+        During development, you have to use the <b>development path</b> to the embedded HTML document.<br>
+      </p>
+      <pre>file:///mnt/sdcard/AppInventor/assets/webviewstring.html</pre>
+
+      <p>
+        <br>Before building the app, use the <b>production path</b>.<br>
+      </p>
+      <pre>file:///android_asset/webviewstring.html</pre>
+      <p></p>
+
+      <div class="row">
+        <div class="three columns">
+          <br><br><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/webviewstring.png" alt="" title="">
+        </div> <!-- end: 3 columns -->
+        <div class="nine columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2webviewstring.png" alt="" title="">
+        </div> <!-- end: 9 columns -->
+      </div> <!-- end: row -->
+
+      <p>HTML file</p>
+      <pre>&lt;!doctype html&gt;
+&lt;head&gt;
+  &lt;meta name="author" content="puravidaapps.com"&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;Test&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;</pre>
+<pre class="script">  &lt;script&gt;
+    document.write("The value from the app is&lt;br /&gt;" + window.AppInventor.getWebViewString());
+    window.AppInventor.setWebViewString("hello from Javascript")
+  &lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      <p>
+        <br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/webviewstring.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2webviewstring2"></a><br><br>
+      <h3>How to display some HTML text in a webviewer</h3>
+      <p>For the example, I uploaded a html page as asset into App Inventor, see below.<br><br>
+        There is one special thing to consider for HTML documents uploaded as assets into App Inventor:
+        During development, you have to use the <b>development path</b> to the embedded HTML document.<br>
+      </p>
+      <pre>file:///mnt/sdcard/AppInventor/assets/webviewstring.html</pre>
+
+      <p>
+        <br>Before building the app, use the <b>production path</b>.<br>
+      </p>
+      <pre>file:///android_asset/webviewstring.html</pre>
+      <p></p>
+
+      <div class="row">
+        <div class="eight columns">
+          <br><br><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/webviewstring2.JPG" alt="" title="">
+        </div> <!-- end: 8 columns -->
+        <div class="four columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/screenLabel.png" alt="" title="">
+        </div> <!-- end: 4 columns -->
+      </div> <!-- end: row -->
+
+      <p>HTML file</p>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta name="author" content="puravidaapps.com"&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;Label&lt;/title&gt;
+
+</pre>
+<pre class="script">  &lt;script src="jquery-1.8.0.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+  <span class="comment">// urldecode function, which also handles the case of spaces being encoded as +</span>
+  <span class="comment">// http://stackoverflow.com/a/4458580/1545993</span>
+  function urldecode(str) {
+    return decodeURIComponent((str+'').replace(/\+/g, '%20'));
+  }
+  &lt;/script&gt;
+</pre>
+<pre>&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;script&gt;
+    <span class="comment">// get the text to display from the webviewstring, urldecoded</span>
+    var strLabel = urldecode(window.AppInventor.getWebViewString());
+
+
+    <span class="comment">// append the text to the body of the html document</span>
+    $("&lt;div&gt;" + strLabel + "&lt;/div&gt;").appendTo("body");
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      <p><br><b>Note</b>: To use this example, you have to upload the library <i>jquery-1.8.0.min.js</i> into the assets of your project.
+        You can find the library in the assets of the example project downloadable below or on the <a class="ext" href="https://code.jquery.com/jquery/" target="_blank">official jQuery download page</a>.
+      </p>
+
+      <p>
+        <br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/webviewstring2.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2sort"></a><br><br>
+      <h3>How to sort a list using the webviewer(!)</h3>
+      <p>After Stephen provided his solution for <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/p2E-r_jNEZ4/K8__PIK9wHsJ" target="_blank">How to sort a list of names</a>, I was thinking, why reinventing the wheel? Why not just using a simple
+        <a class="ext" href="http://www.w3schools.com/jsref/jsref_sort.asp" target="_blank">JavaScript sort method</a>? See the ridiculously simple solution below.
+        This sort works with numeric and alphanumeric values. To perform a numeric sort, you must pass a function as an argument when calling the sort method,
+        <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/p2E-r_jNEZ4/K8__PIK9wHsJ" target="_blank">see the examples here how to do it</a>. To reverse the sort order, just add
+      </p>
+
+      <pre>.reverse()
+      </pre>
+
+      <p><img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2sort.png" width="770" height="565" alt="" title=""><br><br>
+        <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/new.png" alt="New" title="New" style="width:32px;height:32px;">
+        You also can sort <b>list of lists</b> using this method, <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/pVA3VUMN5W8/pZLttKYl3-8J" target="_blank">see an example here</a>.
+      </p>
+
+      <p><b>Note</b>: The data limit using this method is <a class="ext" href="http://stackoverflow.com/a/417184/1545993" target="_blank">around 2 MB (max. length of an URI)</a> For sorting more data, the data also could be passed to an embedded html file in the WebViewString property.<br><br>
+
+        Successfully tested on Nexus 5 running Android 4.4.3 and Samsung Galaxy Tab 10.1N running Android 3.2. For the Galaxy Tab the home url needs to be set first to get this runnning.<br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/sort.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2max"></a><br><br>
+      <h3>How to get the max value within a list of numbers</h3>
+      <p>It has been asked in the  <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/EZVZjW4ZwWc/fiyiGHYrdzYJ" target="_blank">forum</a>: <i>I was trying to calculate max value within a list of numbers.
+        Can you make it without using a loop? ... I started with the same solution as spider pig showed, and that made me wondering if anything faster is possible.</i><br><br>
+
+        This is my embedded HTML/JavaScript solution, which is based on this <a class="ext" href="http://stackoverflow.com/a/6102340/1545993" target="_blank">stackoverflow answer</a>. <b>Thank you newspire!</b><br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2max.png" width="1180" height="365" alt="" title=""><br><br>
+      </p>
+
+<pre>&lt;!doctype html&gt;
+&lt;head&gt;
+  &lt;meta name="author" content="puravidaapps.com"&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+  &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+</pre><pre class="script">  &lt;script&gt;
+    <span class="comment">// get the list from the window.AppInventor object, remove the quotes and split at comma</span>
+    arr = window.AppInventor.getWebViewString().replace(/"/g,'').split(",");
+
+    <span class="comment">// find the max and print it to the title</span>
+    window.document.title = Math.max.apply(Math, arr);
+  &lt;/script&gt;</pre><pre>
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+      <p><br><br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/max.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <p>Please also take a look at the <b>App Inventor and embedded HTML/JavaScript</b>
+        <a class="success button" href="http://puravidaapps.com/tutorials.php#html" target="_top">tutorials and advanced examples</a>.
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2authurl"></a><br><br>
+      <h3>How to pass user and password for basic HTTP Authentication in URL</h3>
+      <p>According to this info on <a class="ext" href="https://serverfault.com/questions/371907/can-you-pass-user-pass-for-http-basic-authentication-in-url-parameters" target="_blank">serverfault.com</a> it is possible to pass user and password in a URL to be able to access a restricted area.
+        The format to be used is
+      </p>
+      <pre>http://username:password@example.com</pre>
+
+      <p><br>Unfortunately this does not work for all Android versions. I tested that on HTC Desire running Android 2.2 and Nexus 5 running Android 4.2.2 and it worked.
+        It did not work on Samsung Galaxy Tab 10.1N running Android 3.2.<br><br>
+
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2authurl.png" width="653" height="102" alt="" title=""><br><br>
+        An example how to download a file from a restricted area you can find
+        <a href="https://puravidaapps.com/filedownload.php#restricted" target="_blank">here</a>.<br><br>
+      </p>
+
+      <div class="row">
+        <div class="four columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/authurl-22.png" alt="" title="">
+        </div> <!-- end: 4 columns -->
+        <div class="four columns">
+        <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/authurl-32.png" alt="" title="">
+        </div> <!-- end: 4 columns -->
+        <div class="four columns">
+        </div> <!-- end: 4 columns -->
+      </div> <!-- end: row -->
+
+      <p>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <a name="2activity"></a><br><br>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <h2>Activity Starter</h2>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2play"></a><br><br>
+      <h3>How to launch Google Play from within your app</h3>
+      <p>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2play.png" width="851" height="131" alt="" title=""><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2contact"></a><br><br>
+      <h3>How to add a contact to the contact list</h3>
+      <p>Provided by <b>Fabio</b> <a class="ext" href="https://groups.google.com/d/msg/programming-with-app-inventor/UbFfTQJL4ls/JfCFpEScaj8J" target="_blank">in this thread</a>.
+        <b>Thank you!</b><br> <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/new.png" alt="New" title="New" style="width:32px;height:32px;">
+        Using the new Extras property we now can use multiple ExtraKey - ExtraValue pairs, see also the
+        <a class="ext" href="http://developer.android.com/reference/android/provider/ContactsContract.Intents.Insert.html" target="_blank">available constants</a>.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2contact.JPG" width="745" height="346" alt="" title=""><br><br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/contact.aia" target="_blank">Download aia file for App Inventor</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2email"></a><br><br>
+      <h3>How to send an eMail</h3>
+      <p>Following the <a class="ext" href="http://ai2.appinventor.mit.edu/reference/other/activitystarter.html" target="_blank">Activity Starter documentation</a> we easily can send an eMail with the <b>Gmail client</b>:<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2email.png" width="689" height="265" alt="" title=""><br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/eMail.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <p>You also might be interested in <a class="success button" href="http://puravidaapps.com/sendmail.php" target="_top">Different eMail solutions for App Inventor</a>.
+      </p>
+
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2waze"></a><br><br>
+      <h3>How to launch Waze to look for a specified location</h3>
+      <p>Following the <a class="ext" href="https://www.waze.com/about/dev" target="_blank">Waze documentation</a> we easily can open Waze and look for a specified location:<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2waze.png" width="605" height="269" alt="" title=""><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2pdf"></a><br><br>
+      <h3>How to  view a pdf document</h3>
+      <p>You can use the Activity Starter to view a pdf document, which is already stored on your device.
+        <a href="http://puravidaapps.com/filebyfile.php" target="_top">How to download files from the internet to your device.</a>
+        To open a pdf document from the Internet, I used a webviewer together with the <i>Google Docs Viewer</i> and the link to the pdf document.<br><br>
+
+        It has been asked in the <a class="ext" href="https://groups.google.com/d/topic/programming-with-app-inventor/WY3yzeDv1us/discussion" target="_blank">App Inventor forum</a>: <i>I have uploaded the PDF files into the media section in App Inventor but
+        I just can't seem to find how to make them open from clicking the button.</i><br>
+        <strike><b>Note:</b> It is not possible to store a pdf document as asset in App Inventor and view it with a pdf viewer. This is, because App Inventor
+        itself can't display pdf files and external pdf viewers called with the activity starter from App Inventor are not able to access
+        assets inside the app.</strike><br><br>
+
+        <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/new.png" alt="New" title="New" style="width:32px;height:32px;">
+        <b>Update: App Inventor is now able to view a pdf file from the assets using the new <a class="info" href="http://puravidaapps.com/pdf.php" target="_top">Pdf extension</a>. Also you do not need an external pdf viewer anymore!</b>
+        <br><br>
+
+        You also might be interested in the following example: <a class="info" href="http://puravidaapps.com/pick.php" target="_top">How to pick a file from SD card with App Inventor</a><br><br>
+
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2pdf.png" width="861" height="297" alt="" title=""><br><br>
+
+        <b>Note</b>: to get this running after the SDK 26 update, you have to temporarily drag a sharing component into the working area, see also
+        <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/V8eR6wzaPRQ/kbvWwpbXCAAJ" target="_blank">this thread</a>.
+        Unfortunately this workaround does not work for Android P devices. Android P devices will display the following error message
+        <i>file://mnt/sdcard/AI/WooHoo.pdf exposed beyond app through Intent.getData()</i>. We have to wait for the MIT App Inventor team to fix this.
+      </p>
+
+      <div class="row">
+        <div class="four columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/pdf-local.png" width="315" height="533" alt="" title="">
+        </div> <!-- end: 4 columns -->
+        <div class="four columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/pdf-web.png" width="315" height="533" alt="" title="">
+        </div> <!-- end: 4 columns -->
+        <div class="four columns">
+        </div> <!-- end: 4 columns -->
+      </div> <!-- end: row -->
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/pdf.aia" target="_blank">Download aia file for App Inventor</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2imagepicker"></a><br><br>
+      <h3>How to pick an image using the Activity Starter</h3>
+      <p><a class="ext" href="https://groups.google.com/d/msg/programming-with-app-inventor/vvBgZo6uFuU/jR8ckuMnF28J" target="_blank">The Image Picker component is limited to 10 images you can pick from</a>: <i>When the user taps an image picker,
+        the device's image gallery appears, and the user can choose an image. After an image is picked, it is saved on the SD card and the
+        ImageFile property will be the name of the file where the image is stored. In order to not fill up storage, a maximum of 10 images will be stored.
+        Picking more images will delete previous images, in order from oldest to newest.</i><br>
+        Alternatively you can use the Activity Starter without such restrictions. <b>Thank you Jari</b> for this
+        <a class="ext" href="https://groups.google.com/d/msg/programming-with-app-inventor/hV9Io1Iroo8/xbhQzcEa8SkJ" target="_blank">tip</a>.<br><br>
+      </p>
+
+      <div class="row">
+        <div class="eight columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2imagepicker.png" alt="" title="">
+        </div> <!-- end: 8 columns -->
+        <div class="four columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/imagepicker.png" alt="" title="">
+        </div> <!-- end: 4 columns -->
+      </div> <!-- end: row -->
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/imagepicker.aia" target="_blank">Download aia file for App Inventor</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2youtube"></a><br><br>
+      <h3>How to use Activity Starter to view a Youtube video in full screen</h3>
+      <p>In the Designer set Screen.Orientation to Landscape. <b>Thank you Aaron</b> for this <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/rO0Lxqxn0nQ/Qel7ZMAiQDoJ" target="_blank">example</a>.<br>
+        <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/new.png" alt="" title="" style="width:32px;height:32px;"> See also the discussion
+        <a class="ext" href="https://community.appinventor.mit.edu/t/youtube-full-screen-view/670/9?u=taifun" target="_blank">here</a>.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2youtube.png" width="514" height="140" alt="" title=""><br>
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/youtube.aia" target="_blank">Download aia file for App Inventor</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2skype"></a><br><br>
+      <h3>How to start a Skype call</h3>
+      <p>This App Inventor solution is based on this <a class="ext" href="http://stackoverflow.com/q/18586411/1545993" target="_blank">stackoverflow question and answer</a>. <b>Thank you allemattio!</b><br>
+        In the textbox you can enter a Skype name or a phone number.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2skype.png" width="541" height="311" alt="" title=""><br>
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/skype.aia" target="_blank">Download aia file for App Inventor</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2enableBT"></a><br><br>
+      <h3>How to enable Bluetooth (User still needs to confirm)</h3>
+      <div class="row">
+        <div class="nine columns">
+          <p>Solution found here: <a class="ext" href="https://play.google.com/store/apps/details?id=appinventor.ai_mletsch80.AppInvActivityStarter" target="_blank">App Inventor Activity Starter App</a>. <b>Thank you mletsch</b>!<br>
+            <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/new.png" alt="New" title="New" style="width:32px;height:32px;"> ActivityStarter.ActivityCanceled event added<br>
+            <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2enableBT.png" alt="" title="">
+          </p>
+        </div> <!-- end: 9 columns -->
+        <div class="three columns">
+          <p><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2enableBTscreen.png" alt="" title="">
+          </p>
+        </div> <!-- end: 3 columns -->
+      </div> <!-- end: row -->
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/enableBT.aia" target="_blank">Download aia file for App Inventor</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2osmand"></a><br><br>
+      <h3>How to start OsmAnd and open the map with a place marker</h3>
+      <p>As it has been said in the <a class="ext" href="http://ai2.appinventor.mit.edu/reference/other/activitystarter.html" target="_blank">Activity Starter documentation</a>: <i>If you can find the "cmp=" string, then the ActivityPackage is the part before the slash,
+        and the ActivityClass is is the entire "cmp=" part, without the slash character.</i><br><br>
+        <!--
+        <b>opening the main menu of OsmAnd</b><br>
+        <img src="./images/snippets/2osmand1.png" width="976" height="99" alt="" title=""><br>
+        <img src="./images/snippets/2osmand2.png" width="709" height="267" alt="" title=""><br><br>
+        -->
+        <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2osmand3.png" width="921" height="39" alt="" title=""><br><br>
+        To find the correct DataURI parameter to use for OsmAnd, see the <a class="ext" href="https://code.google.com/p/osmand/wiki/FAQ#What_intents_does_OsmAnd_listen_to?" target="_blank">OsmAnd documentation</a>.<br>
+        <b>Note</b>: For OsmAnd+ please use <b>net.osmand.plus</b> instead of <b>net.osmand</b> as Activity Package. <b>Thank you Harry!</b><br>
+        <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2osmand4.png" width="888" height="291" alt="" title="">
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/osmand.aia" target="_blank">Download aia file for App Inventor</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2clipboard"></a><br><br>
+      <h3>How to copy text to the Clipboard</h3>
+      <div class="row">
+        <div class="nine columns">
+          <p><b>Precondition for this solution to work: the Google Docs app is installed on the device!</b>
+            Because of an update of the Google Docs app we have to adjust our class name like this:
+            <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2clipboard.png" alt="" title=""><br>
+            To find out the correct settings use the Sharing component and select "Copy to clipboard" in the Share dialog.
+            Then in logcat you can see the correct values for package and class name.
+            <a class="ext" href="http://stackoverflow.com/a/25007574/1545993" target="_blank"><b>Thank you Manish!</b></a>
+          </p>
+        </div> <!-- end: 9 columns -->
+        <div class="three columns">
+          <p><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2clipboard-screen.png" alt="" title="">
+          </p>
+        </div> <!-- end: 3 columns -->
+      </div> <!-- end: row -->
+
+      <p><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/new.png" alt="New" title="New" style="width:32px;height:32px;">
+        You probably also might be interested in my <a class="button" href="http://puravidaapps.com/clipboard.php">App Inventor Clipboard Extension</a>,
+        which can copy and paste to/from the clipboard without having to use another external app...
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/clipboard.aia" target="_blank">Download aia file for App Inventor</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2whatsapp"></a><br><br>
+      <h3>How to start Whatsapp/send a message with Whatsapp</h3>
+      <p>
+        <b>How to send a Whatsapp message to a specific mobile number?</b><br>
+        <a class="ext" href="http://stackoverflow.com/a/17800182/1545993" target="_blank">There is this Android solution</a> but this is unfortunately not possible with App Inventor,
+        you only can open Whatsapp like this<br>
+        <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2whatsapp.PNG" width="631" height="271" alt="" title=""><br><br>
+        or you can prepare the message in App Inventor and pick a contact from the Contact Picker in Whatsapp to send it like this
+        <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2whatsapp2.png" width="632" height="350" alt="" title=""><br><br>
+      </p>
+
+      <p>You also might be interested in the <a class="success button" href="http://puravidaapps.com/sharing.php" target="_top">Sharing extension</a>, which offers a method to share via Whatsapp.
+
+      </p><p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/whatsapp.aia" target="_blank">Download aia file for App Inventor (example 1)</a><br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/whatsapp2.aia" target="_blank">Download aia file for App Inventor (example 2)</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2terminal"></a><br><br>
+      <h3>How to execute statements in the Jackpal Terminal Emulator</h3>
+      <p><i>Terminal Emulator for Android is a terminal emulator for communicating with the built-in Android shell. It emulates a reasonably large subset of
+        Digital Equipment Corporation VT-100 terminal codes, so that programs like "vi", "Emacs" and "NetHack" will display properly.</i>
+        <a class="ext" href="https://play.google.com/store/apps/details?id=jackpal.androidterm" target="_blank">Download the Terminal Emulator for Android from Google Play</a>.
+      </p>
+
+      <p><b>Thank you Richard for being the sponsor of this snippet!</b><br>
+        I just followed the <a class="ext" href="https://github.com/jackpal/Android-Terminal-Emulator/wiki/Launching-Terminal-Emulator-for-Android-from-another-App" target="_blank">documentation</a> and translated this into the following blocks.
+      </p>
+
+      <div class="row">
+        <div class="nine columns">
+          <p>
+            <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2terminal.png" alt="" title="">
+          </p>
+        </div> <!-- end: 9 columns -->
+        <div class="three columns">
+          <p><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2terminal2.png" alt="" title="">
+          </p>
+        </div> <!-- end: 3 columns -->
+      </div> <!-- end: row -->
+
+      <p>After that, you have to modify the manifest, you can use AppToMarket for that. You have to add the permission
+        <b>jackpal.androidterm.permission.RUN_SCRIPT</b> to get this running.<br> The manifest looks like this in the end:
+      </p>
+
+<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest android:versionCode="1" android:versionName="1.0" package="appinventor.ai_taifunbaer.terminal"
+  xmlns:android="http://schemas.android.com/apk/res/android"&gt;
+    &lt;uses-permission android:name="<span class="comment">jackpal.androidterm.permission.RUN_SCRIPT"</span> /&gt;
+    &lt;application android:label="terminal" android:icon="@drawable/ya" android:debuggable="false"&gt;
+        &lt;activity android:name=".Screen1" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.MAIN" /&gt;
+                &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+    &lt;/application&gt;
+&lt;/manifest&gt;
+</pre>
+
+
+      <p><br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/terminal.aia" target="_blank">Download aia file for App Inventor</a><br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/terminal.apk" target="_blank">Download apk file</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2uninstall"></a><br><br>
+      <h3>How to uninstall another app programmatically</h3>
+      <p>Following <a class="ext" href="http://stackoverflow.com/a/34746353" ="_blank"="">this stackoverflow snippet</a> we can uninstall an app like this:
+      </p>
+
+      <div class="row">
+        <div class="nine columns">
+          <p>
+            <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2uninstall1.JPG" alt="" title="">
+          </p>
+        </div> <!-- end: 9 columns -->
+        <div class="three columns">
+          <p><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2uninstall2.JPG" alt="" title="">
+          </p>
+        </div> <!-- end: 3 columns -->
+      </div> <!-- end: row -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <a name="2other"></a><br><br>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <h2>Other Basic Stuff</h2>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2compass"></a><br><br>
+      <h3>How to build a simple compass app with App Inventor</h3>
+      <p>Compass card image from <a class="ext" href="https://en.wikipedia.org/wiki/File:Brosen_windrose.svg" target="_blank">Wikipedia</a> by
+        <a class="ext" href="https://commons.wikimedia.org/wiki/User:Brosen~commonswiki" target="_blank">Brosen</a>. <b>Thank you!</b>
+      </p>
+
+      <div class="row">
+        <div class="eight columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2compass.png" alt="" title="">
+        </div> <!-- end: 8 columns -->
+        <div class="four columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/compass.png" alt="" title="">
+        </div> <!-- end: 4 columns -->
+      </div> <!-- end: row -->
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/compass.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2bearing"></a><br><br>
+      <h3>An enhancement to the compass app to provide additionally the direction to a waypoint</h3>
+      <p><a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/qSkHIeZA5rk/yWh8DEVts74J" target="_blank">It was asked in the forum</a>: <i>I had a question about using a compass direction that points to one specific Adress or coordinate instead of just the north.</i><br>
+        We will have to do some calculations: you can calculate the <a class="ext" href="https://en.wikipedia.org/wiki/Bearing_%28navigation%29" target="_blank">bearing</a> according to the formula provided here <a class="ext" href="http://www.movable-type.co.uk/scripts/latlong.html" target="_blank">http://www.movable-type.co.uk/scripts/latlong.html</a>. <b>Then to get the direction to the waypoint,
+        just calculate azimuth - bearing</b> (in a range between 0 and 360 degrees), see screenshots.
+        The example points to the famous <a class="ext" href="https://www.google.com/maps/@9.1454869,-83.761826,4288m/data=!3m1!1e3?hl=en" target="_blank">whalestail in Uvita, Costa Rica</a>.<br><br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2bearing1.png" width="1062" height="689" alt="" title=""><br><br>
+        <b>Note</b>: See also a modified example by SteveJG <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/agzkMfi-awY/L0kCZyDrBQAJ" target="_blank">in this forum thread</a>, which points to Mekka.<br>
+        <i>Make sure you have your GPS turned on in your Android's Settings menu. You would get an erroneous result if the LocationSensor.Latitude and Longitude both reported 0.
+        If the values do not change, the app will not work because the code is based on local GPS coordinates.</i>
+
+      </p>
+
+      <div class="row">
+        <div class="eight columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2bearing2.png" alt="" title="">
+        </div> <!-- end: 8 columns -->
+        <div class="four columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/bearing.png" alt="" title="">
+        </div> <!-- end: 4 columns -->
+      </div> <!-- end: row -->
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/bearing.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2accelerometer"></a><br><br>
+      <h3>How to trigger something if device is facing down</h3>
+      <p><a class="ext" href="https://groups.google.com/d/msg/appinventor/5NeUs2H0cqY/tCX9z9yqLR4J" target="_blank">It has been asked in the forum</a> how to trigger a sound if the device is facing down.
+        I'm using the <a class="ext" href="http://ai2.appinventor.mit.edu/reference/components/sensors.html#AccelerometerSensor" target="_blank">Accelerometer Sensor</a> for the example, because this sensor offers acceleration in the Z-dimension.
+        Thank you <a class="ext" href="http://www.freesfx.co.uk/" target="_blank">freesfx.co.uk</a> for the car alarm sound.<br><br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2accel.png" width="477" height="247" alt="" title=""><br>
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/accelerometer.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2nestedlistpicker"></a><br><br>
+      <h3>How to create a nested listpicker</h3>
+      <p><a class="ext" href="https://groups.google.com/forum/#!topic/programming-with-app-inventor/Fgc9H1RvLBw" target="_blank">It has been asked in the forum</a>: <i>I need a main listpicker with different sublists of items below them depending which main list item is selected.</i><br>
+        For the solution presented here, I'm using 2 listpicker, the second listpicker for the sublists is hidden and will be opened with the <b>listpicker.open</b> block.<br><br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2nestedlistpicker.png" width="696" height="428" alt="" title=""><br><br>
+
+        <b>How does this work: </b>Using the first listpicker you select the main category, in the example "Fruit" or "Vegetables". Lets assume, you picked "Fruit", which means selection index = 1.
+        Using the same selection index and the select list item block you select the corresponding sublist of listDetail, in the example these are Apple Banana Mango and Orange
+        to display them in the second listpicker.
+      </p>
+
+      <p><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/new.png" alt="New" title="New" style="width:32px;height:32px;"> <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/sSkYTefjc0k/z9vb1tn7D8sJ" target="_blank">Jay Dee asked in the forum"</a>: <i> I am still having trouble figuring out how to put an email and number for each name.
+        When I click on Apple I want to be able to see: Apple<br>555-555-5555 (and if I click it, it will dial the number)<br>apple@gmail.com (and if I click it, it will open up an email)</i><br>
+        That's a nice example to learn how to work with list of lists. I adjusted my nested listpicker example,
+        <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/sSkYTefjc0k/SzRrHwwSp2IJ" target="_blank">you can find it here</a>.
+     </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/nestedlistpicker.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2getdate"></a><br><br>
+      <h3>How to get a date in format YYYY-MM-DD</h3>
+      <p>Starting from App Inventor Version 144 (June 30, 2015) we now can format dates and times easily using a pattern like yyyy-MM-dd.
+        For all possible patterns, see <a class="ext" href="https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html" target="_blank">here</a>.
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2getdate.png" width="604" height="164" alt="" title=""><br>
+
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2leadingZeros"></a><br><br>
+      <h3>How to get leading zeros in App Inventor</h3>
+      <p><img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2leadingZeros.PNG" width="558" height="430" alt="" title=""><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2dayofyear"></a><br><br>
+      <h3>How to get the Day of Year</h3>
+      <p>Just use the <b>Clock.Now</b> block to get loads of information, then use a parse procedure to extract the day of year (see snippet below).
+        <b>Note</b>: As Hal said <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/kofUEubkVV8/XrO78pRJa3EJAs" target="_blank">in this thread</a>,
+        this is an undocumented feature. It's unlikely that this will change, but you have to use this on your own risk.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2dayofyear.png" width="734" height="324" alt="" title=""><br><br>
+
+        <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/new.png" alt="New" title="New" style="width:32px;height:32px;"> A much easier method is using the new FormatDate block like this<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2dayinyear.png" width="605" height="194" alt="" title=""><br>
+        For all possible patterns, see <a class="ext" href="https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html" target="_blank">here</a>.<br><br>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2parse"></a><br><br>
+      <h3>How to parse a result</h3>
+      <p><img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2parse.png" width="957" height="558" alt="" title=""><br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/parse.aia" target="_blank">Download aia file for App Inventor</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2soundrecorder"></a><br><br>
+      <h3>How to use the Sound Recorder</h3>
+      <p></p><p>It has been asked in the <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/MQPSTw5m834/yjoBJF-1f90J" target="_blank">forum</a>:
+        <i>I'm very new to this and would like to use the SoundRecorder but have no idea how it works and unable to find any example.</i><br>
+        I now prepared an example for you:<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2soundrecorder.png" width="767" height="565" alt="" title=""><br>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/soundrecorder.aia" target="_blank">Download aia file for App Inventor</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2notifier"></a><br><br>
+      <h3>New formatting possibilities with the Notifier</h3>
+      <p>According to the <a class="ext" href="http://ai2.appinventor.mit.edu/reference/components/userinterface.html#Notifier" target="_blank">documentation of the notifier component</a> we now can use some HTML for the formatting:
+        <i>The messages in the dialogs (but not the alert) can be formatted using the following HTML tags:
+          &lt;b&gt;, &lt;big&gt;, &lt;blockquote&gt;, &lt;br&gt;, &lt;cite&gt;, &lt;dfn&gt;, &lt;div&gt;, &lt;em&gt;, &lt;small&gt;, &lt;strong&gt;, &lt;sub&gt;,
+          &lt;sup&gt;, &lt;tt&gt;, &lt;u&gt;.  You can also use the font tag to specify color, for example, &lt;font color="blue"&gt;.
+          Some of the available color names are aqua, black, blue, fuchsia, green, grey, lime, maroon, navy, olive, purple, red, silver, teal, white, and yellow.</i><br>
+          Note: You might have to build your app to see the results! <b>Thank you Hal</b> for the example.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2notifier-blocks.PNG" width="910" height="141" alt="" title=""><br>
+      </p>
+
+      <div class="row">
+        <div class="eight columns">
+          <p>
+            <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/notify.aia" target="_blank">Download aia file for App Inventor</a><br>
+            <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/notify.apk" target="_blank">Download apk file</a><br>
+            <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+          </p>
+        </div> <!-- end: 8 columns -->
+        <div class="four columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2notifier-screen.png" alt="" title="">
+        </div> <!-- end: 4 columns -->
+      </div> <!-- end: row -->
+
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2label"></a><br><br>
+      <h3>New formatting possibilities with the Label</h3>
+      <p>Labels can now contain a limited subset of HTML as well as text. Check the <b>HTMLFormat</b> designer property to enable this feature..<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2label.JPG" width="946" height="82" alt="" title=""><br>
+      </p>
+
+      <div class="row">
+        <div class="eight columns">
+          <p>
+            <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/label.aia" target="_blank">Download aia file for App Inventor</a><br>
+            <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+          </p>
+        </div> <!-- end: 8 columns -->
+        <div class="four columns">
+          <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/2label-screen.JPG" alt="" title="">
+        </div> <!-- end: 4 columns -->
+      </div> <!-- end: row -->
+
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2randomsound"></a><br><br>
+      <h3>How to play a random sound when the device is shaken</h3>
+      <p><b>Thank you <a class="ext" href="http://www.flashkit.com/soundfx/Cartoon/Boings" target="_blank">SoundFx</a></b> for the sounds.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2randomsound.png" width="741" height="305" alt="" title=""><br>
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/randomsound.aia" target="_blank">Download aia file for App Inventor</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2lookupinpairs"></a><br><br>
+      <h3>How does the <b>lookup in pairs</b> block work?</h3>
+      <p>Store tag/value pairs in a list to be able to easily search for a tag and get back the corresponding value from the list.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2lookupinpairs.png" width="780" height="301" alt="" title=""><br><br>
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/lookupInPairs.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2removerandom"></a><br><br>
+      <h3>How to pick a random item from a list without picking duplicates?</h3>
+      <p>In this example I use the <a class="ext" href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#randomint" target="_blank">random integer</a> block instead of the <a class="ext" href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#pickrandomitem" target="_blank">pick a random item</a> block. The picked item will be removed from the list after displaying it.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2removerandom.png" width="904" height="383" alt="" title=""><br><br>
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/removerandom.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2share"></a><br><br>
+      <h3>How to take a picture or pick an image and share it</h3>
+      <p>For the Imagepicker, do not forget to add <b>file://</b> to the provided path to the image...<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2share.png" width="759" height="560" alt="" title=""><br><br>
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/share.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2separator"></a><br><br>
+      <h3>A workaround for the decimal separator problem</h3>
+      <p>The <a class="ext" href="http://appinventor.mit.edu/explore/ai2/android-wheres-my-car.html" target="_blank">Android, Where's My Car?</a> tutorial
+        does not work for devices, which use a comma as decimal separator: this is, because the location sensor provides numeric values with comma as decimal separator in this case.
+        The Googe Maps app however expects values with dot as decimal separator to work correctly.<br>
+        So how to fix this issue? The answer is simple: <b>just use the <u>replace all</u> block to replace comma by dot.</b> I prepared a custom procedure for that, see screenshot, you also
+        could use the replace all block directly. Also if you develop an app in North America and you want to be sure that it also can be used in Europe without decimal point issues,
+        just use the replace all block...<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2replaceCommaByDot.png" width="808" height="472" alt="" title=""><br><br>
+      </p>
+
+      <p>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2webget"></a><br><br>
+      <h3>How to get european or chinese characters from Web ResponseContent</h3>
+      <p><a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/fvJsC-Zn3G4/UId9dmKI0yMJ" target="_blank">It has been asked in the forum </a>:
+        <i>why chinese word can't work from web reponsecontent?</i><br>
+        Well, as you can see it works: I stored a text file with spanish, german and chinese characters in a text document.
+        <b>Important: To get this working, you have to store the text in UTF-8 format</b>,
+        see screenshot of notpad "Save As" dialog. Note: I'm using a german version of notepad here.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/webget1.png" width="573" height="101" alt="" title=""><br><br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/webget2.png" width="579" height="198" alt="" title=""><br><br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/webget3.png" width="300" height="78" alt="" title=""><br><br>
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/webget.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2yandex"></a><br><br>
+      <h3>How to use the YandexTranslate component</h3>
+      <p>See the <a class="ext" href="http://ai2.appinventor.mit.edu/reference/components/media.html#YandexTranslate" target="_blank">documentation</a> and
+        <a class="ext" href="http://api.yandex.com/translate/" target="_blank">http://api.yandex.com/translate/</a> for more information,
+        including the list of available languages and the meanings of the language codes and status codes.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2yandex.jpg" width="606" height="560" alt="" title=""><br><br>
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/yandex.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2readfile"></a><br><br>
+      <h3>How to read a file stored as asset in App Inventor</h3>
+      <p>The file component is very easy to use, see also the the <a class="ext" href="http://ai2.appinventor.mit.edu/reference/components/storage.html#File" target="_blank">documentation</a> how to use it.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2readfile.png" width="349" height="208" alt="" title=""><br><br>
+        You also might be interested in <a class="ext" href="https://groups.google.com/d/msg/mitappinventortest/HZ09P-vxaV4/awlitSZP0XcJ" target="_blank">How to append text to a file stored as asset in App Inventor</a>.
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/readfile.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2screenon"></a><br><br>
+      <h3>How to keep the screen on</h3>
+      <p>You add a notifier and a clock, not used for other purposes in your app. Set the clock to a rather long interval, 10 seconds or so.
+        Maybe even a minute would work fine, depending on the setting of your phone. Make the background color of the notifier transparent.
+        When the clock.timer fires, display a warning that is an empty string. In this way you will not see it, because of the transparent background.
+        It keeps your phone awake for as long as you want and as long as your battery stays alive (which may be considerably shorter).
+        <a class="ext" href="http://ai2.appinventor.mit.edu/reference/components/storage.html#File" target="_blank">Note: description by Chica copied from here</a>.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2screenOn1.png" width="581" height="165" alt="" title=""><br><br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2screenOn2.png" width="371" height="238" alt="" title=""><br><br>
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/screenOn.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <a name="2dir"></a><br><br>
+      <h3>How to create a directory</h3>
+      <p>The file component unfortunately can't create a directory, but we can use the Canvas as workaround.<br>
+        <img class="noscale" src="./App Inventor Code Snippets _ Pura Vida Apps_files/2dir.png" width="810" height="298" alt="" title=""><br><br>
+      </p>
+
+      <p><img src="./App Inventor Code Snippets _ Pura Vida Apps_files/new.png" alt="New" title="New" style="width:32px;height:32px;">
+        You probably also might be interested in my <a class="button" href="http://puravidaapps.com/file.php">App Inventor File Extension</a>,
+        which offers some additional blocks related to the App Inventor built-in file component...
+      </p>
+
+      <p>
+        <a class="ext" href="https://downloads.sourceforge.net/project/puravidaapps/createDirectory.aia" target="_blank">Download aia file for App Inventor 2</a><br>
+        <a href="http://puravidaapps.com/snippets.php#top" target="_top">Back to top of page ...</a>
+      </p>
+
+      <hr class="thin">
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <div style="background-color:#9cc03d;">
+  <!-- https://www.paypal.com/cgi-bin/webscr?cmd=_donate-intro-outside
+       https://www.paypal-community.com/t5/About-Business-Archive/Add-select-list-to-donation-button/td-p/728503
+       https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/Appx_websitestandard_htmlvariables/
+  -->
+  <p class="donation">
+    <b><br>Developing and maintaining snippets, tutorials and extensions for App Inventor takes a lot of time.<br>
+    I hope it saved some of your time. If yes, then you might consider to donate a small amount!</b>
+  </p>
+
+  <!-- Start of Form -->
+  <form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+    <!-- If using a Business or Company Logo Graphic, include the "cpp_header_image" variable. -->
+    <input type="hidden" name="cpp_header_image" value="http://puravidaapps.com/images/paypal-header.png">
+    <input type="hidden" name="cmd" value="_donations">
+
+    <!-- Replace "business" value with your PayPal Email Address or your Merchant Account ID -->
+    <input type="hidden" name="business" value="paypal@puravidaapps.com">
+    <input type="hidden" name="tax" value="0">
+    <input type="hidden" name="no_shipping" value="1">
+
+    <!-- Specify details about the contribution -->
+    <input type="hidden" name="item_name" value="Pura Vida Apps">
+    <input type="hidden" name="item_number" value="Donation for Pura Vida Apps">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="no_note" value="0">
+    <input type="hidden" name="cbt" value="Return to Pura Vida Apps">
+
+    <!-- Replace value with the web page you want the customer to return to after a successful transaction -->
+    <input type="hidden" name="return" value="https://puravidaapps.com/thankyou.php">
+    <!-- Replace value with the web page you want the customer to return to after item cancellation -->
+    <input type="hidden" name="cancel_return" value="https://puravidaapps.com">
+
+    <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+
+    <p class="donation"><b>Donation amount:</b>
+      <select name="amount">
+        <option value="5" selected="">5 USD</option>
+        <option value="10">10 USD</option>
+        <option value="25">25 USD</option>
+      </select>
+    </p>
+
+    <input type="image" src="./App Inventor Code Snippets _ Pura Vida Apps_files/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="./App Inventor Code Snippets _ Pura Vida Apps_files/pixel.gif" width="1" height="1">
+  </form>
+  <!-- End of Form -->
+
+  <!-- https://electrum.org/bitcoin_URIs.html -->
+  <p class="donation">
+    or donate some mBTC to <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/bitcoin.png" alt="Bitcoin" style="border:0;width:154px;height:32px;"> Address:<br>
+    <a style="color:white;text-decoration:underline" href="bitcoin:1Jd8kXLHu2Vkuhi15TWHiQm4uE9AGPYxi8?amount=0&amp;message=donation" target="_blank"><b>1Jd8kXLHu2Vkuhi15TWHiQm4uE9AGPYxi8</b></a><br>
+    <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/qr-1Jd8.png" alt="Bitcoin" style="border:0;width:80px;height:80px;"><br><br>
+
+    <b>Thank you! Taifun</b><br>&nbsp;
+  </p>
+</div>             <p style="text-align:center;">
+         <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="./App Inventor Code Snippets _ Pura Vida Apps_files/88x31.png"></a><br>
+         This work by <a href="https://puravidaapps.com/" target="_blank">Pura Vida Apps</a>
+         is licensed under a <a class="ext" rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>
+         <br>with attribution (name=<a href="https://puravidaapps.com/" target="_blank">Pura Vida Apps</a> and link to the source site) required.
+<!--
+         <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0"
+         src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />
+         This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://puravidaapps.com" property="cc:attributionName" rel="cc:attributionURL">Pura Vida Apps</a>
+         is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+-->
+       </p>
+    </div> <!-- end: 12 columns -->
+  </div> <!-- end: row -->
+
+    <div>
+    <hr>
+    <a href="http://puravidaapps.com/index.php">Home</a> |
+    <a href="http://puravidaapps.com/snippets.php">Snippets</a> |
+    <a href="http://puravidaapps.com/tutorials.php">Tutorials</a> |
+    <a href="http://puravidaapps.com/extensions.php">Extensions</a> |
+    <a href="http://puravidaapps.com/links.php">Links</a> |
+    <a href="http://puravidaapps.com/search.php">Search</a> |
+    <a href="http://puravidaapps.com/privacy-policy.php">Privacy Policy</a> |  
+    <a href="http://puravidaapps.com/contact.php">Contact</a>
+    <br><br>
+
+    <!-- http://www.revolvermaps.com/?target=setup2d -->
+<!--
+    <div style="text-align: center;">
+      <div style="display:inline-block;width:500px;">
+        <script type="text/javascript" src="//ra.revolvermaps.com/0/0/7.js?i=1w0t4slnlhn&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;sx=0" async="async"></script>
+      </div>
+    </div>
+-->
+    <p class="footer">Site Content © 2018 <a href="https://puravidaapps.com/">Pura Vida Apps</a> using the
+      <a class="ext" href="https://foundation.zurb.com/" target="_blank">
+      <img src="./App Inventor Code Snippets _ Pura Vida Apps_files/foundation.png" width="20" height="25" alt="Foundation" title="">Foundation Framework</a>.<br>
+    </p>
+
+    <p class="footer">Portions of this page are modifications based on work created and
+      <a class="ext" href="https://www.google.com/intl/en/policies/" target="_blank">shared by Google</a>
+      and used according to terms described in the
+      <a class="ext" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons 3.0 Attribution License.</a>
+      Android is a trademark of Google Inc.
+      <br>
+    </p>
+  </div>
+
+  <!-- Included JS Files (Compressed) -->
+  <script src="./App Inventor Code Snippets _ Pura Vida Apps_files/foundation.min.js"></script>
+  <!-- line 63 of jquery.foundation.magellan.js updated to make the magellan nav bar appear below the Top Bar.-->
+  <script src="./App Inventor Code Snippets _ Pura Vida Apps_files/jquery.foundation.magellan.min.js"></script>
+
+  <!-- Initialize JS Plugins -->
+  <script src="./App Inventor Code Snippets _ Pura Vida Apps_files/app.js"></script>
+
+  <script>
+    $(window).load(function(){
+      $("#featured").orbit();
+    });
+  </script>
+  <!-- orbit -->
+  <script type="text/javascript">
+     $(document).ready(function() {
+       $(window).load(function() {
+         $('#featuredContent').orbit({ fluid: '16x6' });
+         $("#slider").show();
+       });
+     });
+  </script>
+
+
+<iframe id="google_osd_static_frame_7532639481912" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./App Inventor Code Snippets _ Pura Vida Apps_files/saved_resource(2).html"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;" src="./App Inventor Code Snippets _ Pura Vida Apps_files/saved_resource(3).html"></iframe></ins></ins></ins></body><iframe id="google_esf" name="google_esf" src="./App Inventor Code Snippets _ Pura Vida Apps_files/zrt_lookup.html" data-ad-client="ca-pub-4570652611310282" style="display: none;"></iframe></html>
